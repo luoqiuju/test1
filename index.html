@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Ê±ÖÓ</title>
+	<title>æ—¶é’Ÿ</title>
 	<style>
 		* {
 			margin: 0;
@@ -24,7 +24,7 @@
 		.p {
 			position: absolute;
 			left:150px; 
-			transform-origin: left center;/*ÉèÖÃÐý×ªÖÐÐÄ*/
+			transform-origin: left center;/*è®¾ç½®æ—‹è½¬ä¸­å¿ƒ*/
 			z-index: 2;
 		}
 		.hour {
@@ -69,7 +69,7 @@
 			position: absolute;
 			left:150px; 
 			top: 145px;
-			transform-origin: left center;/*ÉèÖÃÐý×ªÖÐÐÄ*/
+			transform-origin: left center;/*è®¾ç½®æ—‹è½¬ä¸­å¿ƒ*/
 			z-index: 1;
 		}
 		.tip0 {
@@ -143,12 +143,8 @@
 		mpointer.style.transform = 'rotate('+ (m*6+s/10-90).toFixed(2)+'deg)';
 		var spointer=document.getElementsByClassName('second')[0];
 		spointer.style.transform = 'rotate('+ (s*6-90)+'deg)';
-		// spointer.style.transform = 'rotate('+ (s*6+ms*6/1000-90)+'deg)';
-		// console.log((h*30+(m/2)-90).toFixed(2));
-		// console.log((m*6+s/10-90).toFixed(2));
-		// console.log((s*6+ms*6/1000-90).toFixed(2));
 	 }
-		//¶¨Ê±Æ÷
+		//å®šæ—¶å™¨
 		drawClock();
 		window.setInterval('drawClock()', 1000);
 	</script>
