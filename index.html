@@ -8,7 +8,7 @@
 			margin: 0;
 			padding: 0;
 		}
-		.clock {
+		#clock {
 			width: 300px;
 			height: 300px;
 			margin: 50px auto;
@@ -75,28 +75,21 @@
 	</style>
 </head>
 <body>
-	<div class="clock">
+	<div id="clock">
 		<div class="p hour"></div>
 		<div class="p minute"></div>
 		<div class="p second"></div>
 		<div class="dot"></div>
-		<div class="tip tip0"></div>
-		<div class="tip tip1"></div>
-		<div class="tip tip2"></div>
-		<div class="tip tip3"></div>
-		<div class="tip tip4"></div>
-		<div class="tip tip5"></div>
-		<div class="tip tip6"></div>
-		<div class="tip tip7"></div>
-		<div class="tip tip8"></div>
-		<div class="tip tip9"></div>
-		<div class="tip tip10"></div>
-		<div class="tip tip11"></div>
 	</div>
 	<script>
 	 	for (var i = 0; i < 12; i++) {
-	 		document.getElementsByClassName("tip"+i)[0].style.transform = "rotate("+ i*30 +"deg)";
+	 		var tip = document.createElement("div");
+	 		var parent = document.getElementById("clock");
+	 		tip.setAttribute("class", "tip tip"+i);
+	 		parent.appendChild(tip);	 		
+	 		tip.style.transform = "rotate("+ i*30 +"deg)";
 	 	}
+
 	 function drawClock() {
 		var now = new Date();
 		// var ms = now.getMilliseconds();
