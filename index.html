@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-	<meta charset="UTF-8">
+	<meta charset="utf-8">
 	<title>时钟</title>
 	<style>
 		* {
@@ -72,42 +72,6 @@
 			transform-origin: left center;/*设置旋转中心*/
 			z-index: 1;
 		}
-		.tip0 {
-			transform: rotate(0deg);
-		}
-		.tip1 {
-			transform: rotate(30deg);
-		}
-		.tip2 {
-			transform: rotate(60deg);
-		}
-		.tip3 {
-			transform: rotate(90deg);
-		}
-		.tip4 {
-			transform: rotate(120deg);
-		}
-		.tip5 {
-			transform: rotate(150deg);
-		}
-		.tip6 {
-			transform: rotate(180deg);
-		}
-		.tip7 {
-			transform: rotate(210deg);
-		}
-		.tip8 {
-			transform: rotate(240deg);
-		}
-		.tip9 {
-			transform: rotate(270deg);
-		}
-		.tip10 {
-			transform: rotate(300deg);
-		}
-		.tip11 {
-			transform: rotate(330deg);
-		}
 	</style>
 </head>
 <body>
@@ -130,6 +94,9 @@
 		<div class="tip tip11"></div>
 	</div>
 	<script>
+	 	for (var i = 0; i < 12; i++) {
+	 		document.getElementsByClassName("tip"+i)[0].style.transform = "rotate("+ i*30 +"deg)";
+	 	}
 	 function drawClock() {
 		var now = new Date();
 		// var ms = now.getMilliseconds();
